@@ -40,6 +40,10 @@ startButton.addEventListener("click", () =>{
         div.classList.add("grid");
         div.style.width = `${size}px`;
         div.style.height = `${size}px`;
+        div.addEventListener("mouseenter",() =>{
+            div.style.backgroundColor = "black";
+        })
         displayDiv.appendChild(div);
     }
 })
+
