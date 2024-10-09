@@ -32,7 +32,7 @@ function getUserInput(){
 startButton.addEventListener("click", () =>{
     let n = getUserInput();
     displayDiv.innerHTML = ''; // Clear previous grid
-    const size = Math.floor(500 / n); // Subtracting the total border width
+    const size = Math.floor(700 / n); // Subtracting the total border width
     let displayDivDimension = n * size;
     displayDiv.style.width = `${displayDivDimension}px`;
     displayDiv.style.height = `${displayDivDimension}px`;
@@ -42,6 +42,7 @@ startButton.addEventListener("click", () =>{
         div.classList.add("grid");
         div.style.width = `${size}px`;
         div.style.height = `${size}px`;
+        div.style.backgroundColor = "white";
         div.addEventListener("mouseenter",(e) =>{
             if(e.ctrlKey){
                 div.style.backgroundColor = "black";

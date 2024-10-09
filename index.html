@@ -11,13 +11,23 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@	0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     </head>
     <body>
-        <div class="heading">
-            <h1 class="firstMessage">Etch-a-Sketch</h1>
-        </div>
-        <div class="container">
-          <button class="startButton">Press to start</button>     
-        </div>
-        <div class="display"></div> 
+        <div class="superset">
+            <div class="left"></div>
+            <div class="eventset">
+                <div class="heading">
+                    <h1 class="firstMessage" style="text-align: center;">Etch-a-Sketch</h1>
+                    <ul>
+                        <li><h4 class="readme">Keep Ctrl key down & hover over a cell to colour it. </h4></li>
+                        <li><h4 class="readme">Keep Alt key down & hover over a cell to erase any colour from it. </h4></li>
+                    </ul>
+                </div>
+                <div class="container">
+                    <button class="startButton">Press to start</button>     
+                </div>
+                <div class="display"></div>
+            </div>
+            <div class="right"></div>
+    </div> 
         <script src="js-eas.js"></script>
     </body>
     </html>
