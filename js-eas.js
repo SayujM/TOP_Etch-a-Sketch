@@ -29,6 +29,8 @@ function getUserInput(){
 }
 
 // Adding a Cntrl & Alt key event checks to colour & erase cells
+// Changing the colour to random ( from previous black).
+
 startButton.addEventListener("click", () =>{
     let n = getUserInput();
     displayDiv.innerHTML = ''; // Clear previous grid
@@ -45,7 +47,10 @@ startButton.addEventListener("click", () =>{
         div.style.backgroundColor = "white";
         div.addEventListener("mouseenter",(e) =>{
             if(e.ctrlKey){
-                div.style.backgroundColor = "black";
+                let red = Math.floor(Math.random() * 255);
+                let green = Math.floor(Math.random() * 255);
+                let blue = Math.floor(Math.random() * 255);
+                div.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
             } else if (e.altKey){
                 div.style.backgroundColor = "white";
             }
@@ -53,4 +58,3 @@ startButton.addEventListener("click", () =>{
         displayDiv.appendChild(div);
     }
 })
-

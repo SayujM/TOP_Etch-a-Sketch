@@ -6,7 +6,7 @@
 }
 
 body{
-    background-image: url('Option3.png');
+    background-image: url('Option4.png');
     background-size: cover;
     background-position: center;
     font-family: "Roboto", sans-serif;
@@ -38,6 +38,7 @@ body{
     text-align: center;
     cursor: pointer;
     margin: 10px 0 20px 0;
+    
 }
 
 .container{
