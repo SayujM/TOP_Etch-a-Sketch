@@ -27,6 +27,8 @@ function getUserInput(){
     }
     return intInp;
 }
+
+// Adding a Cntrl & Alt key event checks to colour & erase cells
 startButton.addEventListener("click", () =>{
     let n = getUserInput();
     displayDiv.innerHTML = ''; // Clear previous grid
@@ -40,8 +42,12 @@ startButton.addEventListener("click", () =>{
         div.classList.add("grid");
         div.style.width = `${size}px`;
         div.style.height = `${size}px`;
-        div.addEventListener("mouseenter",() =>{
-            div.style.backgroundColor = "black";
+        div.addEventListener("mouseenter",(e) =>{
+            if(e.ctrlKey){
+                div.style.backgroundColor = "black";
+            } else if (e.altKey){
+                div.style.backgroundColor = "white";
+            }
         })
         displayDiv.appendChild(div);
     }
